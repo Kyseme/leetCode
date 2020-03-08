@@ -13,13 +13,12 @@ var letterCombinations = function(digits) {
     }
     const letter = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
     const numbers = digits.split('');
-    let result = new Set();
     // a -> letter
     // b -> letter or array
     const traversal = (a, b) => {
         if (b instanceof Array) {
             if (b.length > 1) {
-                b = [...traversal(b[0], b.slice(1))];
+                b = traversal(b[0], b.slice(1));
             }
             else {
                 b = letter[+b[0]];
