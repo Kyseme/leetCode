@@ -1,6 +1,6 @@
 /**
  * @file 动态规划
- * @author zoubo01<zoubo01@baidu.com>
+ * @author zoubo
  */
 
 
